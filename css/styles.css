@@ -318,3 +318,124 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .animate-fade-in {
   animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* ==========================================================================
+   BOTÓN FLOTANTE PROFESIONAL DE WHATSAPP - diva-lashe's
+   ========================================================================== */
+.whatsapp-widget-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  bottom: max(1.5rem, env(safe-area-inset-bottom, 1.5rem));
+  right: max(1.5rem, env(safe-area-inset-right, 1.5rem));
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.whatsapp-float-btn {
+  position: relative;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 9999px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35), 0 8px 30px rgba(43, 37, 35, 0.12);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background-color 0.2s ease;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.whatsapp-float-btn:hover {
+  background-color: #20BA5A;
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45), 0 12px 35px rgba(43, 37, 35, 0.18);
+  color: #FFFFFF;
+}
+
+.whatsapp-float-btn:active {
+  transform: scale(0.95);
+}
+
+.whatsapp-float-btn svg {
+  width: 2rem;
+  height: 2rem;
+  fill: currentColor;
+}
+
+/* Efecto de pulso suave exterior */
+.whatsapp-pulse-ring {
+  position: absolute;
+  inset: -0.35rem;
+  border-radius: 9999px;
+  background-color: rgba(37, 211, 102, 0.35);
+  animation: whatsappPulse 2.8s infinite cubic-bezier(0.4, 0, 0.6, 1);
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes whatsappPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+/* Tooltip elegante femenino para desktop */
+.whatsapp-float-tooltip {
+  display: none;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 4px 12px rgba(43, 37, 35, 0.08);
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.whatsapp-widget-container:hover .whatsapp-float-tooltip {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold-dark);
+}
+
+@media (min-width: 640px) {
+  .whatsapp-float-tooltip {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 639px) {
+  .whatsapp-widget-container {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+  .whatsapp-float-btn {
+    width: 3.35rem;
+    height: 3.35rem;
+  }
+  .whatsapp-float-btn svg {
+    width: 1.85rem;
+    height: 1.85rem;
+  }
+}

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipos de Piel y Autodiagnóstico | diva-lashe's</title>
+  <meta name="description" content="Aprende a identificar tu tipo de piel con el método del rostro lavado en diva-lashe's. Guía experta para piel seca, grasa, mixta, sensible y madura.">
+  <link rel="canonical" href="https://diva-lashes.com/tipos-de-piel.html">
+  
+  <link rel="stylesheet" href="css/tailwind-local.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#FCFAF8] text-[#2B2523] flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="header-glass sticky top-0 z-40 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex flex-col text-left group">
+          <div class="flex items-center gap-1.5">
+            <span class="font-serif text-2xl sm:text-3xl font-semibold tracking-wide text-[#2B2523] group-hover:text-[#9E7D53] transition-colors">
+              diva-lashe's
+            </span>
+            <span class="inline-block w-2 h-2 rounded-full bg-[#E8D3CC]"></span>
+          </div>
+          <span class="text-[0.625rem] tracking-[0.25em] uppercase text-[#9E7D53] font-medium -mt-0.5">
+            Facial Beauty & Skincare
+          </span>
+        </a>
+
+        <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-[#6B5F5B]">
+          <a href="index.html" class="hover:text-[#2B2523] transition-colors">Inicio</a>
+          <a href="tipos-de-piel.html" class="text-[#2B2523] font-semibold border-b-2 border-[#C5A880] pb-1">Tipos de Piel</a>
+          <a href="rutinas.html" class="hover:text-[#2B2523] transition-colors">Rutinas</a>
+          <a href="pasos-cuidado.html" class="hover:text-[#2B2523] transition-colors">Pasos Esenciales</a>
+          <a href="preocupaciones.html" class="hover:text-[#2B2523] transition-colors">Preocupaciones</a>
+          <a href="ingredientes.html" class="hover:text-[#2B2523] transition-colors">Ingredientes</a>
+          <a href="faq.html" class="hover:text-[#2B2523] transition-colors">FAQ & Mitos</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="index.html#diagnostico-test" class="hidden sm:inline-flex btn-gold text-xs uppercase tracking-wider">
+            ✦ Test de Piel
+          </a>
+          <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg text-[#2B2523] hover:bg-[#F7F3EE]" aria-label="Abrir menú">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú Móvil -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-[#FCFAF8]/95 backdrop-blur-md flex flex-col justify-between p-6 overflow-y-auto">
+    <div>
+      <div class="flex justify-between items-center pb-6 border-b border-[#E5DDD3]">
+        <span class="font-serif text-2xl font-semibold text-[#2B2523]">diva-lashe's</span>
+        <button id="mobile-menu-close" class="p-2 text-[#2B2523]"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+      </div>
+      <nav class="flex flex-col space-y-4 py-8 text-lg font-medium text-[#2B2523]">
+        <a href="index.html">Inicio</a>
+        <a href="tipos-de-piel.html" class="text-[#9E7D53] font-semibold">Tipos de Piel & Autodiagnóstico</a>
+        <a href="rutinas.html">Rutinas de Mañana y Noche</a>
+        <a href="pasos-cuidado.html">Pasos Esenciales del Cuidado</a>
+        <a href="preocupaciones.html">Preocupaciones Cutáneas</a>
+        <a href="ingredientes.html">Diccionario de Ingredientes & Compatibilidad</a>
+        <a href="faq.html">Preguntas Frecuentes & Patch Test</a>
+        <a href="aviso-medico.html" class="text-sm text-[#6B5F5B]">Aviso Sanitario y Editorial</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-[#E5DDD3]">
+      <a href="index.html#diagnostico-test" class="btn-gold w-full text-center py-3">✦ Iniciar Test de Piel</a>
+    </div>
+  </div>
+
+  <main class="flex-grow">
+
+    <!-- Hero de Página -->
+    <section class="py-12 sm:py-20 bg-gradient-to-b from-[#F7F3EE] to-[#FCFAF8]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <span class="badge-gold mb-3">✦ Anatomía y Observación</span>
+        <h1 class="font-serif text-3xl sm:text-5xl font-medium text-[#2B2523] mb-4">
+          Conoce la Biología de tu <span class="text-gold-gradient font-semibold italic">Tipo de Piel</span>
+        </h1>
+        <p class="text-base sm:text-lg text-[#6B5F5B] leading-relaxed max-w-2xl mx-auto">
+          El tipo de piel es genético y describe la cantidad de sebo que produce naturalmente el rostro. Aprender a identificarlo es el primer paso para no sobrecargar ni privar a tu piel de lo que realmente requiere.
+        </p>
+      </div>
+    </section>
+
+    <!-- EL MÉTODO DEL ROSTRO LAVADO (AUTO-DIAGNÓSTICO OBJETIVO) -->
+    <section class="py-12 max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="card-luxury p-6 sm:p-10 border-gold bg-[#FCFAF8]">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="step-number text-base">🧪</span>
+          <div>
+            <span class="text-xs uppercase font-bold tracking-wider text-[#9E7D53]">Protocolo en Casa</span>
+            <h2 class="font-serif text-2xl text-[#2B2523] font-semibold">El Método del Rostro Lavado (Bare-Faced Method)</h2>
+          </div>
+        </div>
+
+        <p class="text-sm text-[#6B5F5B] mb-6 leading-relaxed">
+          Para conocer tu piel en su estado natural sin la interferencia de cremas ni agentes externos, sigue este procedimiento de 3 pasos:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div class="p-4 rounded-xl bg-[#F7F3EE] border border-[#E5DDD3]">
+            <span class="font-bold text-[#9E7D53] text-sm block mb-1">Paso 1: Lavar con suavidad</span>
+            <p class="text-xs text-[#6B5F5B]">Lava tu cara con un limpiador neutro suave. No uses exfoliantes, esponjas ni agua muy caliente.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-[#F7F3EE] border border-[#E5DDD3]">
+            <span class="font-bold text-[#9E7D53] text-sm block mb-1">Paso 2: Esperar 30 a 45 min</span>
+            <p class="text-xs text-[#6B5F5B]">Seca con toques suaves de toalla limpia y <strong>NO apliques nada</strong>: ni tónicos, ni cremas, ni hidratantes.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-[#F7F3EE] border border-[#E5DDD3]">
+            <span class="font-bold text-[#9E7D53] text-sm block mb-1">Paso 3: Observación</span>
+            <p class="text-xs text-[#6B5F5B]">Examina frente al espejo y siente con los dedos limpios las diferentes zonas del rostro.</p>
+          </div>
+        </div>
+
+        <!-- Interpretación rápida -->
+        <div class="p-4 rounded-xl bg-white border border-[#E5DDD3] text-xs sm:text-sm text-[#6B5F5B] space-y-2">
+          <p>• <strong>¿Tirantez o descamación en todo el rostro?</strong> Indica <span class="text-[#2B2523] font-semibold">Piel Seca</span>.</p>
+          <p>• <strong>¿Brillo evidente tanto en frente y nariz como en mejillas?</strong> Indica <span class="text-[#2B2523] font-semibold">Piel Grasa</span>.</p>
+          <p>• <strong>¿Brillo en la zona T (frente, nariz, barbilla) pero mejillas normales o tirantes?</strong> Indica <span class="text-[#2B2523] font-semibold">Piel Mixta</span>.</p>
+          <p>• <strong>¿Rojeces visibles, calor, picor o ardor?</strong> Indica <span class="text-[#2B2523] font-semibold">Piel Sensible / Reactiva</span>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUÍA DETALLADA DE CADA TIPO DE PIEL -->
+    <section class="py-12 max-w-5xl mx-auto px-4 sm:px-6 space-y-12">
+
+      <!-- 1. Piel Seca -->
+      <article id="piel-seca" class="card-luxury p-8 sm:p-10 border-soft">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-[#EFE8DE] flex items-center justify-center text-xl">💧</span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-[#2B2523] font-semibold">Piel Seca (Alípica)</h3>
+          </div>
+          <span class="badge-gold">Déficit Lipídico</span>
+        </div>
+
+        <p class="text-sm text-[#6B5F5B] leading-relaxed mb-6">
+          A diferencia de la piel deshidratada (que es una condición temporal por falta de agua), la <strong>piel seca es un tipo de piel genético caracterizado por una baja producción de sebo y lípidos epidérmicos</strong>. Su barrera natural tiene menor capacidad para sellar la humedad.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="p-5 rounded-xl bg-[#F7F3EE] border border-[#E5DDD3]">
+            <h4 class="font-semibold text-sm text-[#2B2523] mb-2 flex items-center gap-1.5 text-green-800">
+              ✓ Ingredientes y Texturas Amigas:
+            </h4>
+            <ul class="text-xs text-[#6B5F5B] space-y-1.5">
+              <li>• <strong>Ceramidas, Colesterol y Ácidos Grasos:</strong> Reparan el cemento lipídico.</li>
+              <li>• <strong>Escualano y Manteca de Karité:</strong> Emolientes reconfortantes.</li>
+              <li>• <strong>Ácido Hialurónico + Glicerina:</strong> Captadores de agua (siempre sellados con crema).</li>
+              <li>• <strong>Limpiadores en bálsamo, crema o leche</strong> (evitar geles espumosos).</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-xl bg-[#FCFAF8] border border-[#E5DDD3]">
+            <h4 class="font-semibold text-sm text-[#2B2523] mb-2 flex items-center gap-1.5 text-[#C05646]">
+              ✕ Qué Evitar Categóricamente:
+            </h4>
+            <ul class="text-xs text-[#6B5F5B] space-y-1.5">
+              <li>• Sulfatos agresivos (SLS) y jabones con pH alcalino (>7.0).</li>
+              <li>• Exfoliantes físicos con gránulos gruesos o abrasivos.</li>
+              <li>• Alcoholes secantes (Alcohol Denat) en primeros puestos del INCI.</li>
+              <li>• Agua excesivamente caliente al lavar el rostro.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Piel Grasa -->
+      <article id="piel-grasa" class="card-luxury p-8 sm:p-10 border-soft">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-[#EFE8DE] flex items-center justify-center text-xl">✨</span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-[#2B2523] font-semibold">Piel Grasa</h3>
+          </div>
+          <span class="badge-gold">Hiperproducción Sebácea</span>
+        </div>
+
+        <p class="text-sm text-[#6B5F5B] leading-relaxed mb-6">
+          Las glándulas sebáceas producen un exceso de sebo, lo que genera brillo persistente, poros dilatados y mayor propensión a puntos negros y comedones. <strong>Error común: intentar resecarla</strong>. Al dejarla sin hidratación, la piel reacciona produciendo más sebo compensatorio (*efecto rebote*).
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="p-5 rounded-xl bg-[#F7F3EE] border border-[#E5DDD3]">
+            <h4 class="font-semibold text-sm text-[#2B2523] mb-2 flex items-center gap-1.5 text-green-800">
+              ✓ Ingredientes y Texturas Amigas:
+            </h4>
+            <ul class="text-xs text-[#6B5F5B] space-y-1.5">
+              <li>• <strong>Ácido Salicílico (BHA 1-2%):</strong> Penetra en el interior del poro y disuelve el sebo.</li>
+              <li>• <strong>Niacinamida (2-5%):</strong> Seborregula y refina visualmente la textura.</li>
+              <li>• <strong>Geles al agua y lociones fluidas 'oil-free':</strong> Hidratación sin oclusión pesada.</li>
+              <li>• <strong>Protector solar con acabado matificante o toque seco.</strong></li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-xl bg-[#FCFAF8] border border-[#E5DDD3]">
+            <h4 class="font-semibold text-sm text-[#2B2523] mb-2 flex items-center gap-1.5 text-[#C05646]">
+              ✕ Qué Evitar Categóricamente:
+            </h4>
+            <ul class="text-xs text-[#6B5F5B] space-y-1.5">
+              <li>• Lavarse la cara más de 2 veces al día (destruye el manto protector).</li>
+              <li>• Aceites densos muy comedogénicos (aceite de coco puro en el rostro).</li>
+              <li>• Tónicos con altos niveles de alcohol que arden y resecan la superficie.</li>
+              <li>• Saltarse la crema hidratante o el protector solar.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Piel Mixta -->
+      <article id="piel-mixta" class="card-luxury p-8 sm:p-10 border-gold">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-[#E8D5CE]/50 flex items-center justify-center text-xl">⚖️</span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-[#2B2523] font-semibold">Piel Mixta</h3>
+          </div>
+          <span class="badge-blush">Equilibrio & Zonificación</span>
+        </div>
+
+        <p class="text-sm text-[#6B5F5B] leading-relaxed mb-6">
+          Es el tipo de piel más frecuente: presenta una <strong>Zona T (frente, nariz y mentón) con tendencia a brillos y poros dilatados</strong>, mientras que las mejillas se mantienen normales o incluso secas y sensibles. La clave cosmética es la *zonificación inteligente*.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="p-5 rounded-xl bg-[#F7F3EE] border border-[#E5DDD3]">
+            <h4 class="font-semibold text-sm text-[#2B2523] mb-2 flex items-center gap-1.5 text-green-800">
+              ✓ Claves de Cuidado:
+            </h4>
+            <ul class="text-xs text-[#6B5F5B] space-y-1.5">
+              <li>• Limpiadores suaves en gel o espuma que no deshidraten mejillas.</li>
+              <li>• Sérum de Niacinamida + Ácido Hialurónico en todo el rostro.</li>
+              <li>• Aplicación localizada de BHA únicamente sobre nariz y frente.</li>
+              <li>• Capa adicional de crema nutritiva en mejillas si hay tirantez.</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-xl bg-[#FCFAF8] border border-[#E5DDD3]">
+            <h4 class="font-semibold text-sm text-[#2B2523] mb-2 flex items-center gap-1.5 text-[#C05646]">
+              ✕ Qué Evitar Categóricamente:
+            </h4>
+            <ul class="text-xs text-[#6B5F5B] space-y-1.5">
+              <li>• Usar productos astringentes para piel grasa en todo el rostro (resecarás las mejillas).</li>
+              <li>• Usar cremas ultra oclusivas en la nariz si tienes tendencia a comedones.</li>
+              <li>• Olvidar el protector solar fluido de amplio espectro.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Piel Sensible y Reactiva -->
+      <article id="piel-sensible" class="card-luxury p-8 sm:p-10 border-soft">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-[#EFE8DE] flex items-center justify-center text-xl">🌸</span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-[#2B2523] font-semibold">Piel Sensible y Reactiva</h3>
+          </div>
+          <span class="badge-gold">Barrera Dérmica Frágil</span>
+        </div>
+
+        <p class="text-sm text-[#6B5F5B] leading-relaxed mb-6">
+          La piel sensible posee un estrato córneo más delgado y permeable, lo que permite que agentes externos irritantes penetren con facilidad, provocando una respuesta inflamatoria acelerada con enrojecimiento, sensación de ardor o descamación.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="p-5 rounded-xl bg-[#F7F3EE] border border-[#E5DDD3]">
+            <h4 class="font-semibold text-sm text-[#2B2523] mb-2 flex items-center gap-1.5 text-green-800">
+              ✓ Ingredientes de Rescate:
+            </h4>
+            <ul class="text-xs text-[#6B5F5B] space-y-1.5">
+              <li>• <strong>Centella Asiática (Cica) y Madecassoside:</strong> Desinflaman y alivian el ardor.</li>
+              <li>• <strong>Pantenol (Vitamina B5):</strong> Calma y reconstituye tejidos superficiales.</li>
+              <li>• <strong>Filtros Solares 100% Minerales (Óxido de Zinc):</strong> No generan calor en la piel.</li>
+              <li>• Fórmulas hipoalergénicas con lista corta de ingredientes.</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-xl bg-[#FCFAF8] border border-[#E5DDD3]">
+            <h4 class="font-semibold text-sm text-[#2B2523] mb-2 flex items-center gap-1.5 text-[#C05646]">
+              ✕ Qué Evitar Categóricamente:
+            </h4>
+            <ul class="text-xs text-[#6B5F5B] space-y-1.5">
+              <li>• Perfumes artificiales, fragancias sintéticas y aceites esenciales cítricos/lavanda.</li>
+              <li>• Ácidos exfoliantes potentes (Ácido Glicólico a concentraciones altas).</li>
+              <li>• Frotar con toallas ásperas o discos de algodón desechables.</li>
+              <li>• Introducir varios productos nuevos a la vez sin realizar el <em>Patch Test</em>.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. Piel Madura -->
+      <article id="piel-madura" class="card-luxury p-8 sm:p-10 border-soft">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-[#EFE8DE] flex items-center justify-center text-xl">⏳</span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-[#2B2523] font-semibold">Piel Madura (Pro-Aging)</h3>
+          </div>
+          <span class="badge-gold">Pérdida de Densidad y Colágeno</span>
+        </div>
+
+        <p class="text-sm text-[#6B5F5B] leading-relaxed mb-6">
+          Con el paso de los años, disminuye la actividad de los fibroblastos (productores de colágeno y elastina) y la piel pierde lípidos protectores con mayor rapidez. El objetivo cosmético es redensificar, restaurar luminosidad y nutrir profundamente.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="p-5 rounded-xl bg-[#F7F3EE] border border-[#E5DDD3]">
+            <h4 class="font-semibold text-sm text-[#2B2523] mb-2 flex items-center gap-1.5 text-green-800">
+              ✓ Activos Clave:
+            </h4>
+            <ul class="text-xs text-[#6B5F5B] space-y-1.5">
+              <li>• <strong>Retinoides (Retinol / Retinal):</strong> Renovación celular y síntesis de colágeno.</li>
+              <li>• <strong>Péptidos y Factores de Crecimiento Cosméticos:</strong> Firmeza y soporte dérmico.</li>
+              <li>• <strong>Vitamina C + Ácido Ferúlico:</strong> Escudo antioxidante contra manchas de fotoenvejecimiento.</li>
+              <li>• <strong>Cremas densas enriquecidas con ceramidas y lípidos.</strong></li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-xl bg-[#FCFAF8] border border-[#E5DDD3]">
+            <h4 class="font-semibold text-sm text-[#2B2523] mb-2 flex items-center gap-1.5 text-[#C05646]">
+              ✕ Qué Evitar Categóricamente:
+            </h4>
+            <ul class="text-xs text-[#6B5F5B] space-y-1.5">
+              <li>• Exposición solar desprotegida (el sol acelera la destrucción de colágeno).</li>
+              <li>• Limpiadores en gel astringentes que acentúen la pérdida de turgencia.</li>
+              <li>• Descuidar el cuello, escote y dorso de las manos.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- LLAMADA AL TEST INTERACTIVO -->
+    <section class="py-16 bg-[#F7F3EE] border-t border-[#E5DDD3]">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="font-serif text-3xl text-[#2B2523] mb-3">¿Aún con dudas sobre tu tipo de piel?</h2>
+        <p class="text-sm text-[#6B5F5B] mb-8">
+          Utiliza nuestro cuestionario de diagnóstico guiado para obtener tu rutina personalizada en menos de 2 minutos.
+        </p>
+        <a href="index.html#diagnostico-test" class="btn-gold">
+          ✦ Realizar el Test Interactivo Ahora
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#F7F3EE] border-t border-[#E5DDD3] pt-12 pb-8 text-[#6B5F5B] text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between text-xs text-[#8F827D]">
+        <p>© 2026 diva-lashe's. Guía cosmética y de belleza facial.</p>
+        <a href="aviso-medico.html" class="hover:text-[#2B2523] mt-2 sm:mt-0 underline">Descargo médico y legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

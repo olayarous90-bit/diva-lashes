@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diccionario de Ingredientes y Compatibilidad | diva-lashe's</title>
+  <meta name="description" content="Diccionario científico y cosmético de activos faciales en diva-lashe's: Ácido Hialurónico, Niacinamida, Retinol, Vitamina C, BHA, AHA y verificador interactivo de compatibilidad.">
+  <link rel="canonical" href="https://diva-lashes.com/ingredientes.html">
+  
+  <link rel="stylesheet" href="css/tailwind-local.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#FCFAF8] text-[#2B2523] flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="header-glass sticky top-0 z-40 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex flex-col text-left group">
+          <div class="flex items-center gap-1.5">
+            <span class="font-serif text-2xl sm:text-3xl font-semibold tracking-wide text-[#2B2523] group-hover:text-[#9E7D53] transition-colors">
+              diva-lashe's
+            </span>
+            <span class="inline-block w-2 h-2 rounded-full bg-[#E8D3CC]"></span>
+          </div>
+          <span class="text-[0.625rem] tracking-[0.25em] uppercase text-[#9E7D53] font-medium -mt-0.5">
+            Facial Beauty & Skincare
+          </span>
+        </a>
+
+        <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-[#6B5F5B]">
+          <a href="index.html" class="hover:text-[#2B2523] transition-colors">Inicio</a>
+          <a href="tipos-de-piel.html" class="hover:text-[#2B2523] transition-colors">Tipos de Piel</a>
+          <a href="rutinas.html" class="hover:text-[#2B2523] transition-colors">Rutinas</a>
+          <a href="pasos-cuidado.html" class="hover:text-[#2B2523] transition-colors">Pasos Esenciales</a>
+          <a href="preocupaciones.html" class="hover:text-[#2B2523] transition-colors">Preocupaciones</a>
+          <a href="ingredientes.html" class="text-[#2B2523] font-semibold border-b-2 border-[#C5A880] pb-1">Ingredientes</a>
+          <a href="faq.html" class="hover:text-[#2B2523] transition-colors">FAQ & Mitos</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="index.html#diagnostico-test" class="hidden sm:inline-flex btn-gold text-xs uppercase tracking-wider">
+            ✦ Test de Piel
+          </a>
+          <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg text-[#2B2523] hover:bg-[#F7F3EE]" aria-label="Abrir menú">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú Móvil -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-[#FCFAF8]/95 backdrop-blur-md flex flex-col justify-between p-6 overflow-y-auto">
+    <div>
+      <div class="flex justify-between items-center pb-6 border-b border-[#E5DDD3]">
+        <span class="font-serif text-2xl font-semibold text-[#2B2523]">diva-lashe's</span>
+        <button id="mobile-menu-close" class="p-2 text-[#2B2523]"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+      </div>
+      <nav class="flex flex-col space-y-4 py-8 text-lg font-medium text-[#2B2523]">
+        <a href="index.html">Inicio</a>
+        <a href="tipos-de-piel.html">Tipos de Piel & Autodiagnóstico</a>
+        <a href="rutinas.html">Rutinas de Mañana y Noche</a>
+        <a href="pasos-cuidado.html">Pasos Esenciales del Cuidado</a>
+        <a href="preocupaciones.html">Preocupaciones Cutáneas</a>
+        <a href="ingredientes.html" class="text-[#9E7D53] font-semibold">Diccionario de Ingredientes & Compatibilidad</a>
+        <a href="faq.html">Preguntas Frecuentes & Patch Test</a>
+        <a href="aviso-medico.html" class="text-sm text-[#6B5F5B]">Aviso Sanitario y Editorial</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-[#E5DDD3]">
+      <a href="index.html#diagnostico-test" class="btn-gold w-full text-center py-3">✦ Iniciar Test de Piel</a>
+    </div>
+  </div>
+
+  <main class="flex-grow">
+
+    <!-- Hero -->
+    <section class="py-12 sm:py-20 bg-gradient-to-b from-[#F7F3EE] to-[#FCFAF8]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <span class="badge-gold mb-3">✦ Ciencia Cosmética & Fórmulas</span>
+        <h1 class="font-serif text-3xl sm:text-5xl font-medium text-[#2B2523] mb-4">
+          Diccionario de <span class="text-gold-gradient font-semibold italic">Ingredientes Cosméticos</span>
+        </h1>
+        <p class="text-base sm:text-lg text-[#6B5F5B] leading-relaxed max-w-2xl mx-auto">
+          Comprende el modo de acción, momento seguro de aplicación, niveles de tolerancia y precauciones esenciales de los activos más respetados de la dermocosmética.
+        </p>
+      </div>
+    </section>
+
+    <!-- WIDGET VERIFICADOR DE COMPATIBILIDAD -->
+    <section id="verificador" class="py-8 max-w-4xl mx-auto px-4 sm:px-6 scroll-mt-24">
+      <div id="compatibility-checker-container">
+        <!-- Montado dinámicamente vía js/compatibility.js -->
+      </div>
+    </section>
+
+    <!-- DICCIONARIO COMPLETO DE ACTIVOS -->
+    <section class="py-12 max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10">
+        <div>
+          <h2 class="font-serif text-2xl sm:text-3xl text-[#2B2523] font-semibold">Fichas Técnicas de Ingredientes</h2>
+          <p class="text-xs sm:text-sm text-[#6B5F5B]">Selección rigurosa de activos respaldados por la evidencia cosmética:</p>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <span class="text-[#8F827D]">Filtrar:</span>
+          <button id="filter-all" class="filter-btn px-3 py-1 rounded-full bg-[#2B2523] text-white font-medium">Todos</button>
+          <button id="filter-humectant" class="filter-btn px-3 py-1 rounded-full bg-[#EFE8DE] hover:bg-[#E5DDD3] text-[#2B2523] font-medium">Hidratantes</button>
+          <button id="filter-renew" class="filter-btn px-3 py-1 rounded-full bg-[#EFE8DE] hover:bg-[#E5DDD3] text-[#2B2523] font-medium">Renovadores</button>
+          <button id="filter-calm" class="filter-btn px-3 py-1 rounded-full bg-[#EFE8DE] hover:bg-[#E5DDD3] text-[#2B2523] font-medium">Calmantes</button>
+        </div>
+      </div>
+
+      <!-- Cuadrícula de Ingredientes generada desde INGREDIENTS_DATA -->
+      <div id="ingredients-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Renderizado dinámico -->
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#F7F3EE] border-t border-[#E5DDD3] pt-12 pb-8 text-[#6B5F5B] text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between text-xs text-[#8F827D]">
+        <p>© 2026 diva-lashe's. Diccionario de activos y cosmética responsable.</p>
+        <a href="aviso-medico.html" class="hover:text-[#2B2523] mt-2 sm:mt-0 underline">Descargo médico y legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data/ingredients.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/compatibility.js"></script>
+  <script>
+    // Renderizado dinámico de tarjetas de ingredientes con filtros
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('ingredients-grid');
+      if (!grid || typeof INGREDIENTS_DATA === 'undefined') return;
+
+      const renderGrid = (items) => {
+        grid.innerHTML = items.map(item => `
+          <div class="card-luxury p-6 sm:p-8 flex flex-col justify-between border-soft hover:border-gold">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="badge-gold text-[0.7rem]">${item.category}</span>
+                <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#EFE8DE] text-[#6B5F5B]">
+                  ${item.usageTime}
+                </span>
+              </div>
+
+              <h3 class="font-serif text-2xl font-semibold text-[#2B2523] mb-0.5">${item.name}</h3>
+              <span class="text-[0.7rem] text-[#8F827D] italic font-mono block mb-3">${item.inci}</span>
+
+              <p class="text-xs sm:text-sm text-[#6B5F5B] leading-relaxed mb-4">
+                ${item.description}
+              </p>
+
+              <div class="space-y-2.5 text-xs text-[#2B2523] mb-4 p-3.5 rounded-xl bg-[#FAF6F0] border border-[#EFE6DC]">
+                <div>
+                  <strong>💡 Cómo aplicar:</strong> <span class="text-[#6B5F5B]">${item.howToApply}</span>
+                </div>
+                <div>
+                  <strong>⚖️ Tolerancia:</strong> <span class="text-[#6B5F5B]">${item.tolerance}</span>
+                </div>
+                ${item.cautions ? `
+                  <div class="text-[#C05646]">
+                    <strong>⚠️ Precaución:</strong> <span class="text-[#8C2C22]">${item.cautions}</span>
+                  </div>
+                ` : ''}
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-[#EFE6DC]">
+              ${item.tags.map(t => `<span class="text-[0.65rem] px-2 py-0.5 rounded-full bg-white border border-[#EFE6DC] text-[#6B5F5B] font-medium">${t}</span>`).join('')}
+            </div>
+          </div>
+        `).join('');
+      };
+
+      renderGrid(INGREDIENTS_DATA);
+
+      // Botones de filtro
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-[#2B2523]', 'text-white');
+            b.classList.add('bg-[#EFE8DE]', 'text-[#2B2523]');
+          });
+          btn.classList.add('bg-[#2B2523]', 'text-white');
+          btn.classList.remove('bg-[#EFE8DE]', 'text-[#2B2523]');
+
+          if (btn.id === 'filter-humectant') {
+            renderGrid(INGREDIENTS_DATA.filter(i => i.category.includes('Humectante') || i.category.includes('Reparadores')));
+          } else if (btn.id === 'filter-renew') {
+            renderGrid(INGREDIENTS_DATA.filter(i => i.category.includes('Renovador') || i.category.includes('Exfoliante')));
+          } else if (btn.id === 'filter-calm') {
+            renderGrid(INGREDIENTS_DATA.filter(i => i.category.includes('Calmante') || i.tags.includes('Calmante') || i.tags.includes('Rojeces')));
+          } else {
+            renderGrid(INGREDIENTS_DATA);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

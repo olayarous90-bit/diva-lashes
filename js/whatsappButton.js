@@ -38,6 +38,7 @@ function createServiceBookingUrl(serviceName, duration) {
 function initWhatsAppButton() {
   const whatsappLink = document.getElementById('whatsapp-floating-btn');
   const tooltipLink = document.getElementById('whatsapp-floating-tooltip');
+  const welcomeHeroBtn = document.getElementById('welcome-hero-whatsapp-btn');
   const targetUrl = getWhatsAppAppointmentUrl();
 
   if (whatsappLink) {
@@ -45,6 +46,9 @@ function initWhatsAppButton() {
   }
   if (tooltipLink) {
     tooltipLink.href = targetUrl;
+  }
+  if (welcomeHeroBtn) {
+    welcomeHeroBtn.href = targetUrl;
   }
 }
 

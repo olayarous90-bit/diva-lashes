@@ -439,3 +439,59 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     height: 1.85rem;
   }
 }
+
+/* ==========================================================================
+   ETIQUETA DE DURACIÓN SOBRE IMÁGENES DE SERVICIOS / PROCEDIMIENTOS
+   ========================================================================== */
+.service-duration-badge {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.28rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 1;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(43, 37, 35, 0.22);
+  pointer-events: none;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  white-space: nowrap;
+}
+
+/* Duración confirmada: Rosa oscuro elegante con tipografía blanca de alto contraste */
+.service-duration-badge.confirmed {
+  background-color: rgba(158, 91, 83, 0.94);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Duración pendiente de confirmación por la profesional */
+.service-duration-badge.pending {
+  background-color: rgba(43, 37, 35, 0.88);
+  color: #FAF6F0;
+  border: 1px dashed rgba(232, 211, 204, 0.7);
+}
+
+.service-book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #9E5B53;
+  transition: color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.service-book-btn:hover {
+  color: #2B2523;
+  transform: translateX(2px);
+}
+

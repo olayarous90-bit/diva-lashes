@@ -20,6 +20,19 @@ function getWhatsAppAppointmentUrl(phone = DIVA_WHATSAPP_CONFIG.phone, customMsg
 }
 
 /**
+ * Genera el enlace para agendar una cita de un servicio específico,
+ * incluyendo su duración si está confirmada.
+ */
+function createServiceBookingUrl(serviceName, duration) {
+  let serviceText = serviceName;
+  if (duration && duration !== 'Por confirmar' && duration !== null) {
+    serviceText += ` (Duración: ${duration})`;
+  }
+  const msg = `¡Hola! 💗 Bienvenida a diva-lashe's. Quiero agendar una cita. Mi nombre es: ____. El servicio que me interesa es: ${serviceText}. La fecha que prefiero es: ____. El horario que prefiero es: ____. ¿Me pueden confirmar la disponibilidad? Gracias.`;
+  return getWhatsAppAppointmentUrl(DIVA_WHATSAPP_CONFIG.phone, msg);
+}
+
+/**
  * Inicializador del botón flotante de WhatsApp
  */
 function initWhatsAppButton() {

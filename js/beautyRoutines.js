@@ -131,12 +131,30 @@ function initBeautyRoutines() {
     const data = BEAUTY_ROUTINES_DATA[key];
     if (!data) return '';
 
+    const serviceKeyMap = {
+      manana: 'rutina-manana',
+      noche: 'rutina-noche',
+      labios: 'cuidado-labios'
+    };
+    const serviceId = serviceKeyMap[key] || 'rutina-manana';
+    const info = (typeof getServiceDurationInfo === 'function')
+      ? getServiceDurationInfo(serviceId)
+      : { badgeText: "🕒 Por confirmar", isConfirmed: false, text: "Por confirmar" };
+    const whatsAppUrl = (typeof getWhatsAppUrlForService === 'function')
+      ? getWhatsAppUrlForService(serviceId)
+      : '#';
+
     let html = `
       <div class="card-luxury p-6 sm:p-10 border-gold bg-[#FCFAF8] shadow-md animate-fade-in">
         <!-- Cabecera de la Rutina -->
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-[#EFE6DC]">
           <div>
-            <span class="badge-gold mb-2">${data.badge}</span>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="badge-gold">${data.badge}</span>
+              <span class="service-duration-badge ${info.isConfirmed ? 'confirmed' : 'pending'} !static ml-1" title="${info.isConfirmed ? 'Duración estimada' : 'Duración pendiente de confirmar'}">
+                <span aria-hidden="true">🕒</span> ${info.isConfirmed ? info.text : 'Por confirmar'}
+              </span>
+            </div>
             <h3 class="font-serif text-2xl sm:text-3xl text-[#2B2523] font-semibold">${data.title}</h3>
             <p class="text-xs sm:text-sm text-[#6B5F5B] mt-1">${data.tagline}</p>
           </div>
@@ -204,7 +222,16 @@ function initBeautyRoutines() {
       `;
     }
 
+    // Botón de agendar por WhatsApp integrado con el nombre del procedimiento
     html += `
+        <div class="mt-8 pt-6 border-t border-[#EFE6DC] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <span class="text-xs text-[#6B5F5B] text-center sm:text-left">
+            ¿Deseas solicitar una cita personalizada para este procedimiento en <strong>diva-lashe's</strong>?
+          </span>
+          <a href="${whatsAppUrl}" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs uppercase tracking-wider py-2.5 px-6 shadow-sm hover:shadow flex items-center justify-center gap-2 w-full sm:w-auto">
+            <span>💬</span> Agendar cita por WhatsApp
+          </a>
+        </div>
       </div>
     `;
 

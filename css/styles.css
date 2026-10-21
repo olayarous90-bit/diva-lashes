@@ -641,10 +641,49 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .welcome-orb,
   .brand-text-shimmer,
   .sparkle-particle,
-  .animate-pulse-gentle {
+  .animate-pulse-gentle,
+  .media-cinematic-overlay,
+  .welcome-media-card img {
     animation: none !important;
     transform: none !important;
   }
+}
+
+/* ==========================================================================
+   PROMPT 10 — ANIMACIÓN PUBLICITARIA SPA PREMIUM PARA DIVA-LASHE'S
+   ========================================================================== */
+.welcome-media-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.welcome-media-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: center center;
+  animation: spaBreathing 10s ease-in-out infinite alternate;
+}
+
+@keyframes spaBreathing {
+  0% { transform: scale(1.0); }
+  100% { transform: scale(1.035); }
+}
+
+.media-cinematic-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.28) 45%, rgba(254, 243, 199, 0.35) 50%, rgba(255, 255, 255, 0.28) 55%, transparent 80%);
+  background-size: 250% 100%;
+  animation: lightSweep 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  mix-blend-mode: overlay;
+  z-index: 2;
+}
+
+@keyframes lightSweep {
+  0% { background-position: -150% 0; }
+  45%, 100% { background-position: 150% 0; }
 }
 
 

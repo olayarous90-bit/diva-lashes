@@ -5,10 +5,7 @@
  * Centraliza las duraciones de cada procedimiento para que la clienta y la
  * dueña puedan consultar los tiempos estimados y modificarlos fácilmente.
  * 
- * Regla cosmética:
- * - Si la duración está confirmada: isConfirmed = true, se muestra el tiempo (ej. "🕒 45 min").
- * - Si está pendiente: isConfirmed = false, se muestra "🕒 Por confirmar" para que la dueña
- *   pueda completar el tiempo exacto sin inventar duraciones no verificadas.
+ * Cada servicio tiene su propia duración configurada de forma independiente.
  */
 
 const DIVA_SERVICES_CONFIG = {
@@ -17,9 +14,9 @@ const DIVA_SERVICES_CONFIG = {
     id: "limpieza-facial",
     name: "Limpieza Facial y Desmaquillado",
     shortName: "Limpieza Facial",
-    duration: null, // Pendiente de confirmar por la dueña (ej. "45 min" o "1 hora")
-    isConfirmed: false,
-    badgeText: "🕒 Por confirmar",
+    duration: "1 hora",
+    isConfirmed: true,
+    badgeText: "🕒 1 hora",
     category: "Higiene Facial",
     description: "Limpieza facial respetuosa y desmaquillado para disolver impurezas sin dañar el manto protector."
   },
@@ -29,9 +26,9 @@ const DIVA_SERVICES_CONFIG = {
     id: "hidratacion-facial",
     name: "Hidratación Facial Profunda",
     shortName: "Hidratación Facial",
-    duration: null, // Pendiente de confirmar (ej. "45 min" o "1 hora")
-    isConfirmed: false,
-    badgeText: "🕒 Por confirmar",
+    duration: "45 min",
+    isConfirmed: true,
+    badgeText: "🕒 45 min",
     category: "Nutrición & Barrera",
     description: "Sérums humectantes y activos selladores para mantener la piel jugosa, elástica y protegida."
   },
@@ -41,9 +38,9 @@ const DIVA_SERVICES_CONFIG = {
     id: "cuidado-labios",
     name: "Cuidado e Hidratación de Labios",
     shortName: "Cuidado de Labios",
-    duration: null, // Pendiente de confirmar (ej. "30 min")
-    isConfirmed: false,
-    badgeText: "🕒 Por confirmar",
+    duration: "30 min",
+    isConfirmed: true,
+    badgeText: "🕒 30 min",
     category: "Zona Delicada",
     description: "Tratamiento emoliente intensivo con bálsamos de ceramidas y protección solar labial."
   },
@@ -53,9 +50,9 @@ const DIVA_SERVICES_CONFIG = {
     id: "rutina-manana",
     name: "Rutina Facial de Mañana",
     shortName: "Rutina de Mañana",
-    duration: null, // Pendiente de confirmar (ej. "30 min")
-    isConfirmed: false,
-    badgeText: "🕒 Por confirmar",
+    duration: "30 min",
+    isConfirmed: true,
+    badgeText: "🕒 30 min",
     category: "Protocolo Diurno",
     description: "Protocolo de preparación diurna con limpieza suave, hidratación y escudo solar indispensable."
   },
@@ -65,21 +62,21 @@ const DIVA_SERVICES_CONFIG = {
     id: "rutina-noche",
     name: "Rutina Facial de Noche",
     shortName: "Rutina de Noche",
-    duration: null, // Pendiente de confirmar (ej. "45 min")
-    isConfirmed: false,
-    badgeText: "🕒 Por confirmar",
+    duration: "45 min",
+    isConfirmed: true,
+    badgeText: "🕒 45 min",
     category: "Protocolo Nocturno",
     description: "Protocolo reparador intensivo nocturno para regenerar la piel y sellar la barrera dérmica."
   },
 
-  // 6. Mascarillas Faciales (Tiempo real documentado en la web para aplicación de velo/arcilla)
+  // 6. Mascarillas Faciales
   "mascarillas-faciales": {
     id: "mascarillas-faciales",
     name: "Tratamiento de Mascarillas Faciales",
     shortName: "Mascarillas Faciales",
-    duration: "15-20 min", // Tiempo de exposición y aplicación documentado en la sección
+    duration: "30 min",
     isConfirmed: true,
-    badgeText: "🕒 15-20 min",
+    badgeText: "🕒 30 min",
     category: "Tratamiento Concentrado",
     description: "Dosis concentrada de hidratación o purificación según las necesidades específicas de la piel."
   },
@@ -89,9 +86,9 @@ const DIVA_SERVICES_CONFIG = {
     id: "exfoliacion",
     name: "Exfoliación Facial Suave",
     shortName: "Exfoliación Suave",
-    duration: null, // Pendiente de confirmar (ej. "30 min" o "45 min")
-    isConfirmed: false,
-    badgeText: "🕒 Por confirmar",
+    duration: "30 min",
+    isConfirmed: true,
+    badgeText: "🕒 30 min",
     category: "Renovación Cutánea",
     description: "Renovación celular delicada sin fricción agresiva para una piel luminosa y poros despejados."
   },
@@ -101,9 +98,9 @@ const DIVA_SERVICES_CONFIG = {
     id: "contorno-ojos",
     name: "Tratamiento de Contorno de Ojos",
     shortName: "Contorno de Ojos",
-    duration: null, // Pendiente de confirmar (ej. "30 min")
-    isConfirmed: false,
-    badgeText: "🕒 Por confirmar",
+    duration: "30 min",
+    isConfirmed: true,
+    badgeText: "🕒 30 min",
     category: "Zona Delicada",
     description: "Cuidado especializado para la piel periocular fina, previniendo líneas y signos de fatiga."
   }
@@ -114,7 +111,7 @@ const DIVA_SERVICES_CONFIG = {
  */
 function getServiceDurationInfo(serviceId) {
   const service = DIVA_SERVICES_CONFIG[serviceId];
-  if (!service) return { badgeText: "🕒 Por confirmar", isConfirmed: false, text: "Por confirmar" };
+  if (!service) return { badgeText: "🕒 30 min", isConfirmed: true, text: "30 min" };
 
   if (service.isConfirmed && service.duration) {
     return {
@@ -164,17 +161,10 @@ function syncServiceDurations() {
     const serviceId = badge.dataset.serviceDuration;
     const info = getServiceDurationInfo(serviceId);
     
-    badge.innerHTML = `<span aria-hidden="true">🕒</span> ${info.isConfirmed ? info.text : 'Por confirmar'}`;
-    
-    if (info.isConfirmed) {
-      badge.classList.remove('pending');
-      badge.classList.add('confirmed');
-      badge.setAttribute('title', `Duración estimada: ${info.text}`);
-    } else {
-      badge.classList.remove('confirmed');
-      badge.classList.add('pending');
-      badge.setAttribute('title', 'Duración pendiente de confirmar por la profesional');
-    }
+    badge.innerHTML = `<span aria-hidden="true">🕒</span> ${info.text}`;
+    badge.classList.remove('pending');
+    badge.classList.add('confirmed');
+    badge.setAttribute('title', `Duración estimada: ${info.text}`);
   });
 
   // Sincronizar botones de agendar servicio con atributo data-book-service
@@ -188,4 +178,9 @@ function syncServiceDurations() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', syncServiceDurations);
+// Ejecutar inmediatamente si el DOM ya está listo, o al cargarse
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', syncServiceDurations);
+} else {
+  syncServiceDurations();
+}

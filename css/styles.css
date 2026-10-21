@@ -323,15 +323,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
    BOTÓN FLOTANTE PROFESIONAL DE WHATSAPP - diva-lashe's
    ========================================================================== */
 .whatsapp-widget-container {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  bottom: max(1.5rem, env(safe-area-inset-bottom, 1.5rem));
-  right: max(1.5rem, env(safe-area-inset-right, 1.5rem));
-  z-index: 50;
-  display: flex;
-  align-items: center;
+  position: fixed !important;
+  bottom: 1.5rem !important;
+  right: 1.5rem !important;
+  bottom: max(1.5rem, env(safe-area-inset-bottom, 1.5rem)) !important;
+  right: max(1.5rem, env(safe-area-inset-right, 1.5rem)) !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
   gap: 0.625rem;
+  pointer-events: auto !important;
 }
 
 .whatsapp-float-btn {
@@ -344,7 +345,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35), 0 8px 30px rgba(43, 37, 35, 0.12);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4), 0 8px 30px rgba(43, 37, 35, 0.2);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background-color 0.2s ease;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
@@ -353,7 +354,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .whatsapp-float-btn:hover {
   background-color: #20BA5A;
   transform: scale(1.08) translateY(-2px);
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45), 0 12px 35px rgba(43, 37, 35, 0.18);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45), 0 12px 35px rgba(43, 37, 35, 0.22);
   color: #FFFFFF;
 }
 
@@ -427,8 +428,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 @media (max-width: 639px) {
   .whatsapp-widget-container {
-    bottom: 1.25rem;
-    right: 1.25rem;
+    bottom: 1.25rem !important;
+    right: 1.25rem !important;
   }
   .whatsapp-float-btn {
     width: 3.35rem;
@@ -444,39 +445,40 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
    ETIQUETA DE DURACIÓN SOBRE IMÁGENES DE SERVICIOS / PROCEDIMIENTOS
    ========================================================================== */
 .service-duration-badge {
-  position: absolute;
-  top: 0.625rem;
-  right: 0.625rem;
-  z-index: 20;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.28rem 0.65rem;
-  border-radius: 9999px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.015em;
-  line-height: 1;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 2px 10px rgba(43, 37, 35, 0.22);
-  pointer-events: none;
-  transition: transform 0.25s ease, background-color 0.25s ease;
-  white-space: nowrap;
+  position: absolute !important;
+  top: 0.65rem !important;
+  right: 0.65rem !important;
+  z-index: 30 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  padding: 0.32rem 0.75rem !important;
+  border-radius: 9999px !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1 !important;
+  background: linear-gradient(135deg, #9E5B53 0%, #833E37 100%) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 4px 14px rgba(43, 37, 35, 0.32) !important;
+  pointer-events: none !important;
+  white-space: nowrap !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* Duración confirmada: Rosa oscuro elegante con tipografía blanca de alto contraste */
 .service-duration-badge.confirmed {
-  background-color: rgba(158, 91, 83, 0.94);
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, #9E5B53 0%, #833E37 100%) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.75) !important;
 }
 
-/* Duración pendiente de confirmación por la profesional */
 .service-duration-badge.pending {
-  background-color: rgba(43, 37, 35, 0.88);
-  color: #FAF6F0;
-  border: 1px dashed rgba(232, 211, 204, 0.7);
+  background-color: rgba(158, 91, 83, 0.9) !important;
+  color: #FFFFFF !important;
+  border: 1px dashed rgba(255, 255, 255, 0.8) !important;
 }
 
 .service-book-btn {
@@ -494,4 +496,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   color: #2B2523;
   transform: translateX(2px);
 }
+
 

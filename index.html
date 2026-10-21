@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>diva-lashe's | Belleza Facial y Cuidado de la Piel</title>
-  <meta name="description" content="diva-lashe's: Guía completa de belleza facial. Limpieza facial, hidratación profunda, cuidado de labios, rutinas de mañana y noche, protector solar, mascarillas, exfoliación e ingredientes.">
+  <title>DIVA-LASHE'S | Belleza Facial y Cuidado de la Piel</title>
+  <meta name="description" content="DIVA-LASHE'S: Guía completa de belleza facial. Limpieza facial, hidratación profunda, cuidado de labios, rutinas de mañana y noche, protector solar, mascarillas, exfoliación e ingredientes.">
   <link rel="canonical" href="https://diva-lashes.com/">
   
+  <!-- Tipografía de Alta Gama: Italiana, Cinzel, Cormorant Garamond y Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Italiana&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <!-- Estilos Base & Utilidades (100% Autónomo y de Carga Inmediata) -->
-  <link rel="stylesheet" href="css/tailwind-local.css?v=3.3">
-  <link rel="stylesheet" href="css/styles.css?v=3.3">
+  <link rel="stylesheet" href="css/tailwind-local.css?v=4.0">
+  <link rel="stylesheet" href="css/styles.css?v=4.0">
 </head>
 <body class="bg-[#FCFAF8] text-[#2B2523] flex flex-col min-h-screen">
 
@@ -114,101 +119,111 @@
   <main class="flex-grow">
 
     <!-- =================================================================== -->
-    <!-- 1. PRESENTACIÓN PRINCIPAL CON ANIMACIÓN (HERO GIF) - diva-lashe's  -->
+    <!-- 1. PORTADA ANIMADA A PANTALLA COMPLETA (FULLSCREEN HERO) - DIVA-LASHE'S -->
     <!-- =================================================================== -->
-    <section id="bienvenida-diva-lashes" class="welcome-hero-section relative overflow-hidden py-14 sm:py-20 lg:py-24 border-b border-[#EFE6DC]">
+    <section id="bienvenida-diva-lashes" class="fullscreen-hero relative w-full min-h-[100vh] min-h-[100dvh] flex flex-col justify-between items-center overflow-hidden border-b border-[#E8D3CC]">
       
-      <!-- Efecto de fondo con resplandor ambiental en tonos rosa palo y beige -->
-      <div class="welcome-bg-glow" aria-hidden="true">
-        <div class="welcome-orb orb-1"></div>
-        <div class="welcome-orb orb-2"></div>
-        <div class="welcome-orb orb-3"></div>
-      </div>
-
-      <!-- Destellos luminosos y pétalos flotantes animados con CSS -->
-      <div class="floating-elements-container" aria-hidden="true">
-        <span class="sparkle-particle sp-1">✦</span>
-        <span class="sparkle-particle sp-2">✨</span>
-        <span class="sparkle-particle sp-3">✦</span>
-        <span class="sparkle-particle sp-4">🌸</span>
-        <span class="sparkle-particle sp-5">✨</span>
-        <span class="sparkle-particle sp-6">✦</span>
-        <span class="sparkle-particle sp-7">🌸</span>
-        <span class="sparkle-particle sp-8">✨</span>
-      </div>
-
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <!-- Fondo y Animación de Spa Facial a Pantalla Completa (Edge-to-Edge) -->
+      <div class="fullscreen-media-bg absolute inset-0 w-full h-full -z-10 overflow-hidden">
         
-        <!-- Insignia superior delicada -->
-        <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-white/90 border border-[#E8D3CC] shadow-sm backdrop-blur-sm">
-          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#9E5B53]">🌸 Belleza • Cuidado • Amor Propio</span>
+        <!-- Imagen / GIF animado cubriendo el 100% de la pantalla sin márgenes ni recuadros -->
+        <img 
+          src="assets/images/diva_lashes_spa_welcome.gif?v=4.0" 
+          alt="Experiencia visual de spa y limpieza facial para DIVA-LASHE'S"
+          class="fullscreen-spa-media w-full h-full object-cover object-[center_32%] sm:object-[center_30%]"
+          loading="eager"
+        >
+        
+        <!-- Capa óptica de atmósfera rica: Rosa empolvado, Beige champán, Blanco perla y reflejos dorados -->
+        <div class="fullscreen-luxury-scrim absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+
+        <!-- Efecto de barrido de luz y destello cinematográfico continuo -->
+        <div class="fullscreen-light-sweep absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+
+        <!-- Resplandores ambientales y partículas luminosas distribuidas -->
+        <div class="welcome-bg-glow" aria-hidden="true">
+          <div class="welcome-orb orb-1"></div>
+          <div class="welcome-orb orb-2"></div>
+          <div class="welcome-orb orb-3"></div>
         </div>
 
-        <!-- Marco animado principal: Animación de lujo con el nombre DIVA-LASHE'S y escena spa -->
-        <div class="welcome-animation-wrapper mx-auto max-w-2xl mb-8 relative">
-          
-          <!-- Resplandor exterior suave con efecto pulso -->
-          <div class="absolute -inset-3 rounded-[2rem] bg-gradient-to-tr from-[#E8D3CC] via-[#FAF2EE] to-[#E5CCA8] blur-lg opacity-80 -z-10 animate-pulse-gentle"></div>
-          
-          <div class="welcome-media-card relative rounded-[1.75rem] overflow-hidden border-2 border-white shadow-2xl bg-white/95">
-            <!-- Archivo GIF animado publicitario real de spa facial con DIVA-LASHE'S -->
-            <img 
-              src="assets/images/diva_lashes_spa_welcome.gif?v=3.3" 
-              alt="Presentación animada publicitaria premium para DIVA-LASHE'S - Tratamiento facial y spa de lujo"
-              class="w-full h-auto object-cover block mx-auto select-none"
-              width="640"
-              height="360"
-              loading="eager"
-            >
-            <!-- Overlay cinematográfico de destello de luz continuo -->
-            <div class="media-cinematic-overlay" aria-hidden="true"></div>
-          </div>
+        <!-- Partículas delicadas flotantes -->
+        <div class="floating-elements-container" aria-hidden="true">
+          <span class="sparkle-particle sp-1">✦</span>
+          <span class="sparkle-particle sp-2">✨</span>
+          <span class="sparkle-particle sp-3">✦</span>
+          <span class="sparkle-particle sp-4">🌸</span>
+          <span class="sparkle-particle sp-5">✨</span>
+          <span class="sparkle-particle sp-6">✦</span>
+          <span class="sparkle-particle sp-7">🌸</span>
+          <span class="sparkle-particle sp-8">✨</span>
+        </div>
+      </div>
 
+      <!-- Espacio superior para balance visual con el encabezado -->
+      <div class="w-full pt-8 sm:pt-14"></div>
+
+      <!-- Contenido central superpuesto en HTML/CSS con nueva tipografía femenina de alta gama -->
+      <div class="fullscreen-hero-content w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 py-8 sm:py-12 my-auto">
+        
+        <!-- Insignia superior refinada -->
+        <div class="inline-flex items-center gap-2 mb-4 sm:mb-6 px-5 py-2 rounded-full bg-black/25 backdrop-blur-md border border-[#F4DFD8]/40 shadow-lg">
+          <span class="text-[0.65rem] sm:text-xs font-semibold uppercase tracking-[0.28em] text-[#FAF2EE]">
+            🌸 Cuidado Facial • Belleza • Amor Propio
+          </span>
         </div>
 
-        <!-- Texto de bienvenida estructurado con el nombre oficial DIVA-LASHE'S -->
-        <div class="welcome-text-content max-w-2xl mx-auto">
-          
-          <!-- Nombre oficial destacado con efecto shimmer de luz en mayúsculas -->
-          <div class="brand-title-container mb-3">
-            <h1 class="brand-animated-name font-serif text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight">
-              <span class="brand-text-shimmer">DIVA-LASHE'S</span>
-            </h1>
-          </div>
+        <!-- Nombre oficial con nueva tipografía luxury beauty script / high-fashion serif -->
+        <div class="brand-hero-title-container mb-3 sm:mb-4">
+          <h1 class="brand-hero-title font-luxury-brand text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.18em] sm:tracking-[0.24em] font-normal leading-tight">
+            <span class="brand-luxury-script">DIVA-LASHE'S</span>
+          </h1>
+        </div>
 
-          <!-- Mensaje principal solicitado -->
-          <h2 class="font-serif text-2xl sm:text-3xl text-[#2B2523] font-medium mb-3">
-            Bienvenida a <span class="text-[#9E5B53] font-semibold">DIVA-LASHE'S</span>
-          </h2>
+        <!-- Bienvenida oficial -->
+        <h2 class="font-serif text-lg sm:text-2xl md:text-3xl text-white tracking-[0.16em] uppercase font-light drop-shadow-md mb-2 sm:mb-3">
+          BIENVENIDA A <span class="font-medium text-[#F6DFD9]">DIVA-LASHE'S</span>
+        </h2>
 
-          <p class="text-base sm:text-lg text-[#6B5F5B] font-serif italic mb-2">
-            "Tu espacio de belleza, cuidado facial y amor propio."
-          </p>
+        <!-- Frase inspiradora solicitada -->
+        <p class="font-serif italic text-base sm:text-xl text-[#FDF8F5] drop-shadow-sm max-w-xl mx-auto mb-2 leading-relaxed">
+          "Tu espacio de belleza, cuidado facial y amor propio."
+        </p>
 
-          <p class="text-sm sm:text-base text-[#6B5F5B] leading-relaxed mb-8 max-w-lg mx-auto">
-            Descubre nuestros servicios y regálate un momento para ti.
-          </p>
+        <!-- Frase secundaria -->
+        <p class="text-xs sm:text-sm md:text-base text-[#FAF0EC]/90 tracking-wide font-light max-w-lg mx-auto mb-8 sm:mb-10 drop-shadow-xs">
+          Descubre nuestros servicios y regálate un momento para ti.
+        </p>
 
-          <!-- Dos botones elegantes solicitados -->
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <!-- Botón 1: Descubrir servicios -->
-            <a href="#cuidados-faciales" class="btn-primary w-full sm:w-auto text-sm py-3.5 px-8 shadow-md hover:shadow-lg flex items-center justify-center gap-2">
-              <span>✨ Descubrir servicios</span>
-            </a>
+        <!-- Dos botones solicitados con alto contraste y diseño premium -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5 max-w-md mx-auto">
+          <!-- Botón 1: DESCUBRIR SERVICIOS -->
+          <a href="#cuidados-faciales" class="btn-hero-discover w-full sm:w-auto text-xs sm:text-sm font-semibold uppercase tracking-[0.16em] py-4 px-8 rounded-full transition-all duration-300 shadow-xl flex items-center justify-center gap-2">
+            <span>✨ DESCUBRIR SERVICIOS</span>
+          </a>
 
-            <!-- Botón 2: Agendar mi cita por WhatsApp -->
-            <a id="welcome-hero-whatsapp-btn"
-               href="https://api.whatsapp.com/send?phone=573001234567&text=%C2%A1Hola%21%20%F0%9F%92%97%20Bienvenida%20a%20diva-lashe%27s.%20Quiero%20agendar%20una%20cita.%20Mi%20nombre%20es%3A%20____.%20El%20servicio%20que%20me%20interesa%20es%3A%20____.%20La%20fecha%20que%20prefiero%20es%3A%20____.%20El%20horario%20que%20prefiero%20es%3A%20____.%20%C2%BFMe%20pueden%20confirmar%20la%20disponibilidad%3F%20Gracias."
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn-gold w-full sm:w-auto text-sm py-3.5 px-8 shadow-sm hover:shadow flex items-center justify-center gap-2">
-              <span>💬 Agendar mi cita por WhatsApp</span>
-            </a>
-          </div>
-
+          <!-- Botón 2: AGENDAR MI CITA -->
+          <a id="welcome-hero-whatsapp-btn"
+             href="https://api.whatsapp.com/send?phone=573001234567&text=%C2%A1Hola%21%20%F0%9F%92%97%20Bienvenida%20a%20DIVA-LASHE%27S.%20Quiero%20agendar%20una%20cita.%20Mi%20nombre%20es%3A%20____.%20El%20servicio%20que%20me%20interesa%20es%3A%20____.%20La%20fecha%20que%20prefiero%20es%3A%20____.%20El%20horario%20que%20prefiero%20es%3A%20____.%20%C2%BFMe%20pueden%20confirmar%20la%20disponibilidad%3F%20Gracias."
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-hero-whatsapp w-full sm:w-auto text-xs sm:text-sm font-semibold uppercase tracking-[0.16em] py-4 px-8 rounded-full transition-all duration-300 shadow-xl flex items-center justify-center gap-2">
+            <span>💬 AGENDAR MI CITA</span>
+          </a>
         </div>
 
       </div>
+
+      <!-- Indicador interactivo inferior para continuar navegando normalmente por el sitio -->
+      <div class="w-full pb-6 sm:pb-8 flex justify-center relative z-20">
+        <a href="#conoce-diva-lashes" class="hero-scroll-down group flex flex-col items-center gap-1.5 text-white/75 hover:text-white transition-colors" aria-label="Deslizar hacia abajo para conocer más">
+          <span class="text-[0.625rem] tracking-[0.25em] uppercase font-light">Deslizar para descubrir</span>
+          <svg class="w-4 h-4 group-hover:translate-y-1 transition-transform animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+      </div>
+
     </section>
 
     <!-- =================================================================== -->

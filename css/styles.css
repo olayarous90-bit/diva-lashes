@@ -807,4 +807,80 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   }
 }
 
+/* ==========================================================================
+   PROMPT 12 — BARRA SUPERIOR DE ANUNCIOS & NAVEGACIÓN PRINCIPAL
+   ========================================================================== */
+.announcement-bar {
+  background: linear-gradient(90deg, #FAF0EC 0%, #F5E5D5 22%, #FDF7F2 50%, #F5E5D5 78%, #FAF0EC 100%);
+  background-size: 200% auto;
+  border-bottom: 1px solid rgba(229, 204, 168, 0.45);
+}
+
+.announcement-shimmer-effect {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: announcementShimmer 7s ease-in-out infinite;
+}
+
+@keyframes announcementShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.announcement-text {
+  font-family: 'Montserrat', sans-serif;
+  color: #7D4E47;
+  letter-spacing: 0.05em;
+  animation: announcementPulse 5s ease-in-out infinite alternate;
+}
+
+@keyframes announcementPulse {
+  0% { opacity: 0.92; transform: scale(0.995); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.nav-link-item {
+  position: relative;
+  transition: color 0.25s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-link-item:hover {
+  color: #9E5B53;
+}
+
+.nav-link-item::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #9E5B53, #D4AF37);
+  transition: width 0.3s ease;
+  border-radius: 9999px;
+}
+
+.nav-link-item:hover::after {
+  width: 100%;
+}
+
+.btn-nav-reserve {
+  background: linear-gradient(135deg, #C5A880 0%, #D4AF37 50%, #B89260 100%);
+  color: #1A130E;
+  border: 1px solid rgba(254, 243, 199, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+.btn-nav-reserve:hover {
+  background: linear-gradient(135deg, #D4AF37 0%, #F5D0A9 50%, #C5A880 100%);
+  color: #1A130E;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
+}
+
+
 

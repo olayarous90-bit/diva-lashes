@@ -63,15 +63,20 @@ function initMobileMenu() {
  */
 function initHeaderScroll() {
   const header = document.querySelector('header');
+  const headerGlass = document.querySelector('.header-glass');
   if (!header) return;
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 30) {
+    if (window.scrollY > 25) {
       header.classList.add('shadow-sm');
-      header.style.backgroundColor = 'rgba(252, 250, 248, 0.96)';
+      if (headerGlass) {
+        headerGlass.style.backgroundColor = 'rgba(252, 250, 248, 0.96)';
+      }
     } else {
       header.classList.remove('shadow-sm');
-      header.style.backgroundColor = 'rgba(252, 250, 248, 0.90)';
+      if (headerGlass) {
+        headerGlass.style.backgroundColor = 'rgba(252, 250, 248, 0.90)';
+      }
     }
   });
 }
